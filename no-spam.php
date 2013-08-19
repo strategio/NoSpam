@@ -15,7 +15,7 @@
  * Plugin Name: No Spam
  * Plugin URI:  http://nospam.strategio.fr/
  * Description: A simple and efficient anti-spam plugin (based on dummy input and javascript enabled client)
- * Version:     1.0.0
+ * Version:     1.0.2
  * Author:      Pierre SYLVESTRE
  * Author URI:  http://nospam.strategio.fr/
  * Text Domain: no_spam
@@ -32,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
 require_once( plugin_dir_path( __FILE__ ) . 'class-no-spam.php' );
 
 // Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
-register_activation_hook( __FILE__, array( 'No_Spam', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'No_Spam', 'deactivate' ) );
+register_activation_hook( __FILE__, array('No_Spam', 'activate') );
+register_deactivation_hook( __FILE__, array('No_Spam', 'deactivate') );
 
 No_Spam::get_instance();

@@ -75,7 +75,9 @@ class No_Spam {
 	 */
 	private function __construct() {
 
-		$this->options = array_merge($this->options, unserialize(get_option(self::$plugin_slug.'_options')));
+		$saved_options = get_option(self::$plugin_slug.'_options');
+		if(is_array($saved_options))
+			$this->options = array_merge($this->options, $saved_options);
 
 		// Load plugin text domain
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
@@ -129,7 +131,7 @@ class No_Spam {
 				'blahblah_field_ID' => self::generate_field_ID(),
 			);
 
-		update_option( self::$plugin_slug.'_options', serialize($options));
+		update_option( self::$plugin_slug.'_options', $options);
 	}
 
 	/**
