@@ -2,8 +2,8 @@
 Donate link: http://donate.strategio.fr/?label=Donation%20for%20NoSpam%20plugin
 Tags: comments, spam, anti-spam, spam-bots
 Requires at least: 3.5.1
-Tested up to: 3.9
-Stable tag: 1.0.3
+Tested up to: 6.8
+Stable tag: 1.0.4
 Contributors: strategio
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -34,6 +34,9 @@ Coming soon...
 No screenshot provided.
 
 == Changelog ==
+
+= 1.0.4 =
+* Updated WordPress version support 6.8
 
 = 1.0.3 =
 * Updated WordPress version support 3.9
