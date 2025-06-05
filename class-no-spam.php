@@ -36,7 +36,7 @@ class No_Spam {
 	 *
 	 * @var      string
 	 */
-	protected static $plugin_slug = 'no_spam';
+       protected static $plugin_slug = 'no_spam';
 
 	/**
 	 * Instance of this class.
@@ -169,14 +169,13 @@ class No_Spam {
 	 *
 	 * @since    1.0.0
 	 */
-	public function load_plugin_textdomain() {
+       public function load_plugin_textdomain() {
 
-		$domain = self::$plugin_slug;
-		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+               $locale = apply_filters( 'plugin_locale', get_locale(), 'no_spam' );
 
-		load_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
-		load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
-	}
+               load_textdomain( 'no_spam', WP_LANG_DIR . '/no_spam/no_spam-' . $locale . '.mo' );
+               load_plugin_textdomain( 'no_spam', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/lang/' );
+       }
 
 	/**
 	 * Register and enqueue admin-specific style sheet.
@@ -243,13 +242,13 @@ class No_Spam {
 	 */
 	public function add_plugin_admin_menu() {
 
-		$this->plugin_screen_hook_suffix = add_plugins_page(
-			__( 'No Spam', self::$plugin_slug ),
-			__( 'No Spam', self::$plugin_slug ),
-			'read',
-			self::$plugin_slug,
-			array( $this, 'display_plugin_admin_page' )
-		);
+               $this->plugin_screen_hook_suffix = add_plugins_page(
+                       __( 'No Spam', 'no_spam' ),
+                       __( 'No Spam', 'no_spam' ),
+                        'read',
+                        self::$plugin_slug,
+                        array( $this, 'display_plugin_admin_page' )
+                );
 
 	}
 
@@ -332,7 +331,7 @@ class No_Spam {
 	 *
 	 * @param string
 	 */
-	public function add_comment_notice($notes){
-		echo '<p id="nospam-notice">'.__('Please enable javascript to post a comment !').'</p>';
-	}
+       public function add_comment_notice($notes){
+               echo '<p id="nospam-notice">'.__( 'Please enable javascript to post a comment !', 'no_spam' ).'</p>';
+       }
 }
