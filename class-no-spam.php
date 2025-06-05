@@ -24,7 +24,7 @@ class No_Spam {
 	 *
 	 * @var     string
 	 */
-	protected $version = '1.0.0';
+     protected $version = '1.0.4';
 
 	/**
 	 * Unique identifier for your plugin.

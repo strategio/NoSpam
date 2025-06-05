@@ -15,7 +15,7 @@
  * Plugin Name: No Spam
  * Plugin URI:  http://nospam.strategio.fr/
  * Description: A simple and efficient anti-spam plugin (based on dummy input and javascript enabled client)
- * Version:     1.0.2
+ * Version:     1.0.4
  * Author:      Pierre SYLVESTRE
  * Author URI:  http://nospam.strategio.fr/
  * Text Domain: no_spam
