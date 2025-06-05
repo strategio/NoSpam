@@ -93,7 +93,7 @@ class No_Spam {
 		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		//add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
-		// Hooking plugin functionnalities
+                // Hooking plugin functionalities
 		add_filter( 'comment_form_default_fields', array( $this, 'add_blahblah_input_field' ) );
 		add_action( 'comment_form_after', array( $this, 'input_field_script' ) );
 		add_filter( 'pre_comment_approved', array( $this, 'check_form_fields') , '99', 2 );
